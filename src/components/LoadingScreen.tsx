@@ -33,10 +33,14 @@ export default function LoadingScreen() {
                         >
                             <div className="relative w-48 h-48 mb-8">
                                 <Image
-                                    src="/images/logo-brand-gold.png"
+                                    src="/images/logo-brand-source.png"
                                     alt="Al Tamdeen Logo"
                                     fill
                                     className="object-contain"
+                                    style={{
+                                        filter: "invert(1) brightness(1.5) sepia(1) saturate(5) hue-rotate(5deg)",
+                                        mixBlendMode: 'screen'
+                                    }}
                                     priority
                                 />
                             </div>

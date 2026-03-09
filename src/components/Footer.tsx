@@ -48,10 +48,14 @@ export default function Footer() {
                         <Link href="/" className="block mb-6">
                             <div className="relative w-40 h-10">
                                 <Image
-                                    src="/images/logo-brand-gold.png"
+                                    src="/images/logo-brand-source.png"
                                     alt="Al Tamdeen Construction"
                                     fill
                                     className="object-contain object-left"
+                                    style={{
+                                        filter: "invert(1) brightness(1.5) sepia(1) saturate(5) hue-rotate(5deg)",
+                                        mixBlendMode: 'screen'
+                                    }}
                                     priority
                                 />
                             </div>

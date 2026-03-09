@@ -71,10 +71,14 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center group">
                     <div className="relative w-52 h-16">
                         <Image
-                            src="/images/logo-brand-gold.png"
+                            src="/images/logo-brand-source.png"
                             alt="Al Tamdeen Construction"
                             fill
                             className="object-contain object-left"
+                            style={{
+                                filter: "invert(1) brightness(1.5) sepia(1) saturate(5) hue-rotate(5deg)",
+                                mixBlendMode: 'screen'
+                            }}
                             priority
                         />
                     </div>
