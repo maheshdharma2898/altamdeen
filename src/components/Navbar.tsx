@@ -71,11 +71,10 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center group">
                     <div className="relative w-52 h-16">
                         <Image
-                            src="/images/logo.png"
+                            src="/images/logo-brand-gold.png"
                             alt="Al Tamdeen Construction"
                             fill
                             className="object-contain object-left"
-                            style={{ filter: "brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(800%) hue-rotate(5deg) brightness(100%) contrast(100%)" }}
                             priority
                         />
                     </div>
