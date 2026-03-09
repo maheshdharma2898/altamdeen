@@ -1,17 +1,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Award, ChevronRight } from 'lucide-react';
+import {
+  ArrowRight, CheckCircle, Award, ChevronRight, MapPin, Phone, Mail,
+  Landmark, ShieldCheck, Building2, Anchor, Route, Waypoints, Zap,
+  Factory, Cpu, FileText, Palette, Construction, Ruler, ClipboardList, PenTool
+} from 'lucide-react';
 import { SERVICES, AUTHORITIES, PROJECTS, TESTIMONIALS, BLOG_POSTS } from '@/lib/data';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import AnimatedStats from '@/components/AnimatedStats';
 import WhyChooseUs from '@/components/WhyChooseUs';
 
-const serviceIcons: Record<string, string> = {
-  'architectural-design': '🏛️',
-  'authority-approvals': '📋',
-  'fit-out-works': '🏗️',
-  'mep-services': '⚡',
-  'construction-renovation': '🏢',
+const iconMap: Record<string, any> = {
+  'architectural': Ruler,
+  'approvals': ClipboardList,
+  'fitout': PenTool,
+  'mep': Zap,
+  'construction': Construction,
+  'dm': Landmark,
+  'dcd': ShieldCheck,
+  'dda': Building2,
+  'trakhees': Anchor,
+  'rta': Route,
+  'rta-row': Waypoints,
+  'dewa': Zap,
+  'jafza': Factory,
+  'dso': Cpu,
+  'developer-noc': FileText,
+  'fitout-approvals': Palette
+};
+
+const renderIcon = (iconKey: string, size = 24) => {
+  const IconComponent = iconMap[iconKey] || Landmark;
+  return <IconComponent size={size} strokeWidth={1.5} />;
 };
 
 export default function HomePage() {
@@ -65,7 +85,7 @@ export default function HomePage() {
       </section>
 
       {/* ── COMPANY INTRO ── */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -85,9 +105,39 @@ export default function HomePage() {
               </p>
               <div className="p-5 mb-8 rounded-sm" style={{ background: '#f5f5f0', borderLeft: '3px solid #c9a84c' }}>
                 <strong className="block text-sm font-semibold mb-1" style={{ color: '#0a1628' }}>Our Approach:</strong>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">
                   We blend creativity, practicality, and compliance to deliver projects that are aesthetically stunning, functionally efficient, and fully aligned with client requirements.
                 </p>
+                <div className="grid grid-cols-2 gap-4 border-t pt-4" style={{ borderColor: 'rgba(201,168,76,0.1)' }}>
+                  <div className="flex items-start gap-2">
+                    <MapPin size={14} className="mt-0.5" style={{ color: '#c9a84c' }} />
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Location</div>
+                      <div className="text-xs text-[#0a1628] font-medium">Dubai – U.A.E</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Award size={14} className="mt-0.5" style={{ color: '#c9a84c' }} />
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Postbox</div>
+                      <div className="text-xs text-[#0a1628] font-medium">12996</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Phone size={14} className="mt-0.5" style={{ color: '#c9a84c' }} />
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Phone</div>
+                      <div className="text-xs text-[#0a1628] font-medium">+971 4 451 1000</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Mail size={14} className="mt-0.5" style={{ color: '#c9a84c' }} />
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Email</div>
+                      <div className="text-xs text-[#0a1628] font-medium">info@altamdeenco.com</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <Link href="/about" className="btn-gold text-sm">
                 Learn More About Us <ArrowRight size={15} />
@@ -119,8 +169,8 @@ export default function HomePage() {
       {/* ── STATS ── */}
       <AnimatedStats />
 
-      {/* ── SERVICES ── */}
-      <section className="py-24 bg-white">
+      {/* ── SERVICES OVERVIEW ── */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <div className="section-tag mb-4">What We Do</div>
@@ -140,8 +190,8 @@ export default function HomePage() {
                 style={{ border: '1px solid #e5e7eb', background: '#fff' }}
               >
                 <div className="p-8">
-                  <div className="w-14 h-14 flex items-center justify-center rounded-sm mb-5 text-2xl transition-all duration-300 group-hover:scale-110" style={{ background: 'rgba(10,22,40,0.05)', border: '1px solid rgba(201,168,76,0.2)' }}>
-                    {s.icon}
+                  <div className="w-14 h-14 flex items-center justify-center rounded-sm mb-5 text-gold transition-all duration-300 group-hover:scale-110" style={{ background: 'rgba(10,22,40,0.05)', border: '1px solid rgba(201,168,76,0.2)' }}>
+                    {renderIcon(s.icon, 28)}
                   </div>
                   <h3 className="text-lg font-bold mb-3 group-hover:text-yellow-700 transition-colors" style={{ fontFamily: 'Playfair Display, serif', color: '#0a1628' }}>
                     {s.title}
@@ -159,7 +209,7 @@ export default function HomePage() {
       </section>
 
       {/* ── AUTHORITY APPROVALS ── */}
-      <section className="py-24" style={{ background: '#f5f5f0' }}>
+      <section className="py-16" style={{ background: '#f5f5f0' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <div className="section-tag mb-4">Regulatory Expertise</div>
@@ -180,7 +230,9 @@ export default function HomePage() {
                 className="group card-lift rounded-sm p-5 text-center transition-all duration-300"
                 style={{ background: '#fff', border: '1px solid #e5e7eb' }}
               >
-                <div className="text-3xl mb-3">{a.icon}</div>
+                <div className="text-gold mb-3 flex justify-center">
+                  {renderIcon(a.icon, 32)}
+                </div>
                 <div className="font-bold text-sm mb-1 group-hover:text-yellow-700 transition-colors" style={{ color: '#0a1628', fontFamily: 'Inter, sans-serif' }}>
                   {a.abbr}
                 </div>
@@ -201,7 +253,7 @@ export default function HomePage() {
       </section>
 
       {/* ── PROJECTS ── */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
             <div>
@@ -248,11 +300,11 @@ export default function HomePage() {
 
 
       {/* ── TESTIMONIALS ── */}
-      <section className="py-24" style={{ background: '#f5f5f0' }}>
+      <section className="py-16" style={{ background: '#0a1628' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <div className="section-tag mb-4">Client Feedback</div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif', color: '#0a1628' }}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif', color: '#fff' }}>
               What Our Clients Say
             </h2>
             <div className="gold-line w-20 mx-auto" />
@@ -261,8 +313,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── BLOG ── */}
-      <section className="py-24 bg-white">
+      {/* ── RECENT BLOG ── */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
             <div>
@@ -302,7 +354,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CONTACT CTA ── */}
-      <section className="py-24 relative overflow-hidden" style={{ background: '#0d1f3c' }}>
+      <section className="py-16 relative overflow-hidden" style={{ background: '#0d1f3c' }}>
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 60% 50%, #c9a84c 0%, transparent 60%)' }} />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <div className="section-tag mb-5">Get Started</div>

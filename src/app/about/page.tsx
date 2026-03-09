@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Users, Award, Globe, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Award, Globe, Clock, MapPin, Phone, Mail } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen">
             {/* Hero */}
-            <section className="relative pt-52 pb-24 overflow-hidden" style={{ background: '#0a1628' }}>
+            <section className="relative pt-40 pb-16 overflow-hidden" style={{ background: '#0a1628' }}>
                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 80% 50%, #c9a84c 0%, transparent 60%)' }} />
                 <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
                     <div>
@@ -52,7 +52,7 @@ export default function AboutPage() {
             </section>
 
             {/* Vision & Mission */}
-            <section className="py-20 bg-white">
+            <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
                     {[
                         { label: 'Our Vision', text: 'To be Dubai\'s foremost integrated construction and authority approval partner — recognized for excellence, innovation, and flawless delivery.' },
@@ -67,7 +67,7 @@ export default function AboutPage() {
             </section>
 
             {/* Core Values */}
-            <section className="py-20" style={{ background: '#f5f5f0' }}>
+            <section className="py-16" style={{ background: '#f5f5f0' }}>
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-12">
                         <div className="section-tag mb-3">What We Stand For</div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
             </section>
 
             {/* Team */}
-            <section className="py-20 bg-white">
+            <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-12">
                         <div className="section-tag mb-3">Leadership</div>
@@ -111,9 +111,35 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+            {/* Contact Details Section */}
+            <section className="py-16 bg-white">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="bg-[#0a1628] rounded-sm p-12 text-center relative overflow-hidden">
+                        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #c9a84c 0%, transparent 50%)' }} />
+                        <h2 className="text-3xl font-bold text-white mb-10 relative z-10" style={{ fontFamily: 'Playfair Display, serif' }}>Our Office Details</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+                            {[
+                                { icon: MapPin, label: 'Location', value: 'Dubai – U.A.E' },
+                                { icon: Award, label: 'Post Box', value: '12996' },
+                                { icon: Phone, label: 'Telephone', value: '+971 4 451 1000' },
+                                { icon: Mail, label: 'Email', value: 'info@altamdeenco.com' },
+                                { icon: Globe, label: 'Website', value: 'www.altamdeenco.com' },
+                            ].map(item => (
+                                <div key={item.label} className="flex flex-col items-center">
+                                    <div className="w-12 h-12 rounded-full mb-4 flex items-center justify-center" style={{ background: 'rgba(201,168,76,0.15)', border: '1px solid rgba(201,168,76,0.3)' }}>
+                                        <item.icon size={22} style={{ color: '#c9a84c' }} />
+                                    </div>
+                                    <div className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-1">{item.label}</div>
+                                    <div className="text-sm font-medium text-white/80">{item.value}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* CTA */}
-            <section className="py-20" style={{ background: '#0a1628' }}>
+            <section className="py-16" style={{ background: '#0a1628' }}>
                 <div className="max-w-2xl mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>Let's Build Something Extraordinary</h2>
                     <p className="text-white/50 mb-8">Ready to partner with Dubai's trusted construction and approvals experts?</p>

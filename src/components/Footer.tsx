@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, ArrowRight, Building2, ClipboardCheck, Hammer, Zap, HardHat } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, Mail, MapPin, ArrowRight, Building2, ClipboardCheck, Hammer, Zap, HardHat, Globe } from 'lucide-react';
 
 const footerServices = [
     { label: 'Architectural Design', href: '/services/architectural-design' },
@@ -41,16 +42,19 @@ export default function Footer() {
 
             {/* Main Footer */}
             <div className="max-w-7xl mx-auto px-6 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
                     {/* Brand */}
-                    <div className="lg:col-span-1">
-                        <Link href="/" className="flex items-center gap-3 mb-5">
-                            <div className="w-10 h-10 flex items-center justify-center rounded-sm" style={{ background: 'linear-gradient(135deg, #a87d2e, #e4c36a)' }}>
-                                <span className="text-white font-bold text-lg" style={{ fontFamily: 'Playfair Display, serif' }}>T</span>
-                            </div>
-                            <div>
-                                <div className="text-white font-bold text-lg leading-tight" style={{ fontFamily: 'Playfair Display, serif' }}>Al Tamdeen</div>
-                                <div className="text-xs tracking-widest uppercase" style={{ color: '#c9a84c' }}>Construction</div>
+                    <div className="lg:col-span-4">
+                        <Link href="/" className="block mb-6">
+                            <div className="relative w-40 h-10">
+                                <Image
+                                    src="/images/logo.png"
+                                    alt="Al Tamdeen Construction"
+                                    fill
+                                    className="object-contain object-left"
+                                    style={{ filter: "brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(800%) hue-rotate(5deg) brightness(100%) contrast(100%)" }}
+                                    priority
+                                />
                             </div>
                         </Link>
                         <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
@@ -59,21 +63,28 @@ export default function Footer() {
                         <div className="space-y-3">
                             <div className="flex items-start gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
                                 <MapPin size={15} className="flex-shrink-0 mt-0.5" style={{ color: '#c9a84c' }} />
-                                Dubai, United Arab Emirates
+                                <div>
+                                    Dubai – U.A.E<br />
+                                    <span className="text-[10px] opacity-60">P.O. Box: 12996</span>
+                                </div>
                             </div>
                             <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
                                 <Phone size={15} style={{ color: '#c9a84c' }} />
-                                +971 4 XXX XXXX
+                                +971 4 451 1000
                             </div>
                             <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
                                 <Mail size={15} style={{ color: '#c9a84c' }} />
-                                info@altamdeen.ae
+                                info@altamdeenco.com
+                            </div>
+                            <div className="flex items-center gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                                <Globe size={15} style={{ color: '#c9a84c' }} />
+                                www.altamdeenco.com
                             </div>
                         </div>
                     </div>
 
                     {/* Services */}
-                    <div>
+                    <div className="lg:col-span-3">
                         <h4 className="text-sm font-semibold tracking-widest uppercase mb-5" style={{ color: '#c9a84c' }}>Services</h4>
                         <ul className="space-y-2.5">
                             {footerServices.map(s => (
@@ -88,7 +99,7 @@ export default function Footer() {
                     </div>
 
                     {/* Authorities */}
-                    <div>
+                    <div className="lg:col-span-3">
                         <h4 className="text-sm font-semibold tracking-widest uppercase mb-5" style={{ color: '#c9a84c' }}>Authority Approvals</h4>
                         <ul className="space-y-2.5">
                             {footerAuthorities.map(a => (
@@ -103,7 +114,7 @@ export default function Footer() {
                     </div>
 
                     {/* Company */}
-                    <div>
+                    <div className="lg:col-span-2">
                         <h4 className="text-sm font-semibold tracking-widest uppercase mb-5" style={{ color: '#c9a84c' }}>Company</h4>
                         <ul className="space-y-2.5">
                             {[

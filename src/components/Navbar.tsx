@@ -1,15 +1,16 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, Building2, ClipboardCheck, Hammer, Zap, HardHat, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown, Ruler, ClipboardList, PenTool, Zap, Construction, Phone } from 'lucide-react';
 
 const serviceItems = [
-    { title: 'Architectural Design & Interior', href: '/services/architectural-design', icon: Building2, desc: 'Bespoke design and interior solutions' },
-    { title: 'Authority Approval Works', href: '/services/authority-approvals', icon: ClipboardCheck, desc: 'All Dubai authority permits managed' },
-    { title: 'Fit-Out Works', href: '/services/fit-out-works', icon: Hammer, desc: 'Premium commercial & residential fit-outs' },
+    { title: 'Architectural Design & Interior', href: '/services/architectural-design', icon: Ruler, desc: 'Bespoke design and interior solutions' },
+    { title: 'Authority Approval Works', href: '/services/authority-approvals', icon: ClipboardList, desc: 'All Dubai authority permits managed' },
+    { title: 'Fit-Out Works', href: '/services/fit-out-works', icon: PenTool, desc: 'Premium commercial & residential fit-outs' },
     { title: 'MEP Services', href: '/services/mep-services', icon: Zap, desc: 'Mechanical, electrical & plumbing engineering' },
-    { title: 'Construction & Renovation', href: '/services/construction-renovation', icon: HardHat, desc: 'Full-cycle construction management' },
+    { title: 'Construction & Renovation', href: '/services/construction-renovation', icon: Construction, desc: 'Full-cycle construction management' },
 ];
 
 const navLinks = [
@@ -54,12 +55,12 @@ export default function Navbar() {
                     <div className="flex items-center gap-6 text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
                         <span className="flex items-center gap-1.5">
                             <Phone size={11} style={{ color: '#c9a84c' }} />
-                            +971 4 XXX XXXX
+                            +971 4 451 1000
                         </span>
-                        <span>info@altamdeen.ae</span>
+                        <span>info@altamdeenco.com</span>
                     </div>
                     <div className="flex items-center gap-4 text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                        <span>Dubai, United Arab Emirates</span>
+                        <span>Dubai – U.A.E</span>
                     </div>
                 </div>
             </div>
@@ -67,19 +68,16 @@ export default function Navbar() {
             {/* Main Nav */}
             <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-3 group">
-                    <div className="relative">
-                        <div className="w-10 h-10 flex items-center justify-center rounded-sm" style={{ background: 'linear-gradient(135deg, #a87d2e, #e4c36a)' }}>
-                            <span className="text-white font-bold text-lg" style={{ fontFamily: 'Playfair Display, serif' }}>T</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="text-white font-bold text-lg leading-tight" style={{ fontFamily: 'Playfair Display, serif', letterSpacing: '0.02em' }}>
-                            Al Tamdeen
-                        </div>
-                        <div className="text-xs tracking-widest uppercase" style={{ color: '#c9a84c' }}>
-                            Construction
-                        </div>
+                <Link href="/" className="flex items-center group">
+                    <div className="relative w-52 h-16">
+                        <Image
+                            src="/images/logo.png"
+                            alt="Al Tamdeen Construction"
+                            fill
+                            className="object-contain object-left"
+                            style={{ filter: "brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(800%) hue-rotate(5deg) brightness(100%) contrast(100%)" }}
+                            priority
+                        />
                     </div>
                 </Link>
 

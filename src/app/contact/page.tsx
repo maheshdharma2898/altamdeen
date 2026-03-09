@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, CheckCircle, Globe } from 'lucide-react';
 
 const projectTypes = [
     'Residential Villa',
@@ -53,9 +53,11 @@ export default function ContactPage() {
 
                         <div className="space-y-5 mb-10">
                             {[
-                                { icon: MapPin, label: 'Address', value: 'Dubai, United Arab Emirates' },
-                                { icon: Phone, label: 'Phone', value: '+971 4 XXX XXXX' },
-                                { icon: Mail, label: 'Email', value: 'info@altamdeen.ae' },
+                                { icon: MapPin, label: 'Address', value: 'Dubai – U.A.E' },
+                                { icon: MapPin, label: 'P.O. Box', value: '12996' },
+                                { icon: Phone, label: 'Phone', value: '+971 4 451 1000' },
+                                { icon: Mail, label: 'Email', value: 'info@altamdeenco.com' },
+                                { icon: Globe, label: 'Website', value: 'www.altamdeenco.com' },
                             ].map(c => (
                                 <div key={c.label} className="flex items-start gap-4">
                                     <div className="w-10 h-10 flex items-center justify-center rounded-sm flex-shrink-0" style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.2)' }}>

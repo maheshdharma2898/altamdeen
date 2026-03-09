@@ -58,7 +58,7 @@ export default function AuthoritiesPage() {
     return (
         <div className="min-h-screen bg-[#f9fafb]">
             {/* Hero & Header Section */}
-            <section className="relative pt-60 pb-44 overflow-hidden bg-navy">
+            <section className="relative pt-44 pb-32 overflow-hidden bg-navy">
                 {/* Background decorative elements */}
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gold/10 to-transparent pointer-events-none" />
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
@@ -104,7 +104,7 @@ export default function AuthoritiesPage() {
             </section>
 
             {/* Main Content Section - DARK THEME */}
-            <section className="py-24 relative bg-navy pt-40 -mt-24 overflow-hidden">
+            <section className="py-20 relative bg-navy pt-32 -mt-24 overflow-hidden">
                 {/* Subtle background flair */}
                 <div className="absolute top-1/4 left-0 w-96 h-96 bg-gold/5 rounded-full blur-[120px] -ml-48 pointer-events-none" />
                 <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] -mr-64 pointer-events-none" />

@@ -1,9 +1,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import {
+    ArrowRight, CheckCircle, Landmark, ShieldCheck, Building2,
+    Anchor, Route, Waypoints, Zap, Factory, Cpu, FileText,
+    Palette, Construction, Ruler, ClipboardList, PenTool
+} from 'lucide-react';
 import { SERVICES, TESTIMONIALS } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+
+const iconMap: Record<string, any> = {
+    'architectural': Ruler,
+    'approvals': ClipboardList,
+    'fitout': PenTool,
+    'mep': Zap,
+    'construction': Construction,
+    'dm': Landmark,
+    'dcd': ShieldCheck,
+    'dda': Building2,
+    'trakhees': Anchor,
+    'rta': Route,
+    'rta-row': Waypoints,
+    'dewa': Zap,
+    'jafza': Factory,
+    'dso': Cpu,
+    'developer-noc': FileText,
+    'fitout-approvals': Palette
+};
+
+const renderIcon = (iconKey: string, size = 32) => {
+    const IconComponent = iconMap[iconKey] || Landmark;
+    return <IconComponent size={size} strokeWidth={1.5} />;
+};
 
 export async function generateStaticParams() {
     return SERVICES.map(s => ({ slug: s.slug }));
@@ -46,8 +74,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 <div className="relative z-10 max-w-7xl mx-auto px-6">
                     <div className="section-tag mb-4">Service Details</div>
                     <div className="flex items-center gap-5 mb-5">
-                        <div className="w-16 h-16 flex items-center justify-center rounded-sm text-3xl flex-shrink-0" style={{ background: 'rgba(201,168,76,0.15)', border: '1px solid rgba(201,168,76,0.3)' }}>
-                            {service.icon}
+                        <div className="w-16 h-16 flex items-center justify-center rounded-sm text-gold flex-shrink-0" style={{ background: 'rgba(201,168,76,0.15)', border: '1px solid rgba(201,168,76,0.3)' }}>
+                            {renderIcon(service.icon)}
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: 'Playfair Display, serif' }}>
                             {service.title}

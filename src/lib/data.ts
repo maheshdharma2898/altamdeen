@@ -89,7 +89,7 @@ export const SERVICES = [
   {
     id: 'authority-approvals',
     slug: 'authority-approvals',
-    icon: '📋',
+    icon: 'approvals',
     title: 'Authority Approval Works',
     shortDesc: 'End-to-end management of permits and approvals across all Dubai regulatory bodies.',
     fullDesc: 'Navigating Dubai’s authority approvals can be complex and time-consuming. At Al Tamdeen Construction, we simplify this process with expert guidance and end-to-end support. Our team has extensive experience with all major Dubai authorities, including Dubai Municipality (DM), Dubai Development Authority (DDA), Trakhees, Dubai Civil Defense (DCD), Roads and Transport Authority (RTA), DEWA, and Developer NOCs (Emaar, Nakheel, DSO, etc.).\n\nWe manage every step of the approval process, from initial design submission to final completion certificates, ensuring that your project progresses smoothly, legally, and efficiently.',
@@ -169,7 +169,7 @@ export const SERVICES = [
   {
     id: 'fit-out-works',
     slug: 'fit-out-works',
-    icon: '🏗️',
+    icon: 'fitout',
     title: 'Fit-Out Works',
     shortDesc: 'Premium commercial and residential fit-out solutions delivered with meticulous attention to detail.',
     fullDesc: 'At Al Tamdeen Construction, our Fit-Out Works transform interiors into functional, elegant, and brand-aligned spaces. Whether for residential villas, commercial offices, retail outlets, or hospitality projects, we focus on delivering precision, quality, and aesthetic excellence at every stage.\n\nOur turnkey fit-out solutions ensure that every space is tailored to the client’s vision, optimized for functionality, and executed with meticulous attention to detail. We seamlessly integrate architectural elements, interior finishes, and MEP systems to deliver a cohesive and fully operational environment.',
@@ -333,7 +333,7 @@ export const SERVICES = [
   {
     id: 'construction-renovation',
     slug: 'construction-renovation',
-    icon: '🏢',
+    icon: 'construction',
     title: 'Construction & Renovation',
     shortDesc: 'Full-cycle construction and renovation services from groundwork to final delivery.',
     fullDesc: 'At Al Tamdeen Construction, we deliver comprehensive construction and renovation solutions that combine structural integrity, precision, and aesthetics. From ground-up projects to refurbishment and expansion works, we ensure every project is executed with quality, safety, and timely delivery.\n\nWhether it’s a residential villa, commercial building, retail outlet, or industrial facility, our team manages all construction phases — including planning, execution, and supervision — to transform concepts into fully realized, durable structures.',
@@ -470,7 +470,7 @@ export const AUTHORITIES = [
     id: 'dcd',
     name: 'Dubai Civil Defense',
     abbr: 'DCD',
-    icon: '🚒',
+    icon: 'dcd',
     color: '#a01010',
     overview: 'The Dubai Civil Defense (DCD) plays a critical role in ensuring that every building in the Emirate meets fire safety, prevention, and emergency preparedness standards. No construction, renovation, or fit-out work can begin or be occupied without DCD approval.\n\nAt Al Tamdeen Construction, we handle the entire DCD approval process — from design submission and material certification to final inspections and completion certificates. Our expert team coordinates with DCD officers to ensure that every project is fully compliant, safe, and approved on time.',
     services: [
@@ -509,7 +509,7 @@ export const AUTHORITIES = [
     id: 'dda',
     name: 'Dubai Development Authority',
     abbr: 'DDA',
-    icon: '🏙️',
+    icon: 'dda',
     color: '#0a4a8a',
     overview: 'The Dubai Development Authority (DDA) is one of Dubai’s leading regulatory bodies responsible for overseeing urban planning, design control, construction, and development regulations within designated master-planned communities and free zones such as Dubai Internet City, Dubai Media City, and Dubai Design District (d3).\n\nAt Al Tamdeen Construction, we provide complete assistance in obtaining all DDA-related approvals — ensuring that every stage of your project, from concept design to construction completion, fully complies with DDA’s technical, architectural, and safety standards.\n\nOur team has extensive experience working within DDA’s digital submission systems and procedures, ensuring that your project progresses smoothly, efficiently, and without delays.',
     services: [
@@ -549,7 +549,7 @@ export const AUTHORITIES = [
     id: 'trakhees',
     name: 'Trakhees',
     abbr: 'TRK',
-    icon: '⚓',
+    icon: 'trakhees',
     color: '#005b8a',
     overview: 'Trakhees, the regulatory arm of Ports, Customs, and Free Zone Corporation (PCFC), is responsible for overseeing design, construction, health, safety, and environment (HSE) standards in major development zones and freehold areas such as JAFZA, Palm Jumeirah, Mina Rashid, Dubai Maritime City, and Nakheel projects.\n\nEvery construction or fit-out project under Trakhees jurisdiction must go through a structured approval process to ensure compliance with the Trakhees Code of Construction (TCC) and Dubai’s urban development regulations.\n\nAt Al Tamdeen Construction, we provide end-to-end coordination for all Trakhees approvals — from concept submissions to completion certification — ensuring full regulatory compliance, timely approvals, and smooth project progression.',
     services: [
@@ -590,7 +590,7 @@ export const AUTHORITIES = [
     id: 'rta',
     name: 'Roads & Transport Authority',
     abbr: 'RTA',
-    icon: '🚦',
+    icon: 'rta',
     color: '#1a7a3a',
     overview: 'The Roads and Transport Authority (RTA) is the governing body responsible for the design, regulation, and maintenance of Dubai’s transport and road infrastructure. Any construction or development project that involves road access, parking layout, traffic flow, or work near public rights-of-way requires RTA approval.\n\nAt Al Tamdeen Construction, we specialize in handling all RTA approval requirements — from road access and parking layout approvals to excavation and right-of-way permits. Our team ensures that your project adheres to all RTA design standards, safety guidelines, and traffic management regulations, facilitating smooth execution and timely approval.',
     services: [
@@ -632,7 +632,7 @@ export const AUTHORITIES = [
     id: 'rta-row',
     name: 'RTA Right-of-Way',
     abbr: 'ROW',
-    icon: '🛣️',
+    icon: 'rta-row',
     color: '#2a6a1a',
     overview: 'The Right-of-Way (ROW) division of the Dubai Roads and Transport Authority (RTA) is responsible for regulating and protecting public infrastructure — including roads, sidewalks, service corridors, and utilities — during construction or maintenance activities.\n\nAny project that involves excavation, fencing, scaffolding, hoarding, or temporary access along public roads or within RTA-controlled areas must obtain ROW approval before work begins.\n\nAt Al Tamdeen Construction, we provide expert coordination for all RTA ROW services, ensuring that every activity near roadways or public utilities is safe, compliant, and officially permitted. Our team manages the complete process — from application and design submission to inspection and reinstatement approval — guaranteeing full alignment with RTA regulations.',
     services: [
@@ -716,7 +716,7 @@ export const AUTHORITIES = [
     id: 'jafza',
     name: 'Jebel Ali Free Zone',
     abbr: 'JFZ',
-    icon: '🏭',
+    icon: 'jafza',
     color: '#7a3a00',
     overview: 'The Jebel Ali Free Zone Authority (JAFZA) is one of Dubai’s largest and most strategically important free zones, regulating commercial, industrial, and logistics developments within its jurisdiction. Any construction, fit-out, or modification within JAFZA requires formal approval to ensure compliance with Trakhees regulations, fire and safety codes, and development standards.\n\nAt Al Tamdeen Construction, we provide end-to-end support for all JAFZA approvals — from design submission and technical documentation to inspections and completion certification. Our experienced team ensures smooth processing, regulatory compliance, and timely clearance for projects of all types and scales.',
     services: [
@@ -756,7 +756,7 @@ export const AUTHORITIES = [
     id: 'dso',
     name: 'Dubai Silicon Oasis',
     abbr: 'DSO',
-    icon: '💻',
+    icon: 'dso',
     color: '#4a0a7a',
     overview: 'Dubai Silicon Oasis (DSO) is a government-owned technology park and free zone that hosts commercial, residential, and industrial developments. All construction, renovation, and fit-out projects within DSO require formal approvals to ensure compliance with DSO’s design, safety, and infrastructure standards.\n\nAt Al Tamdeen Construction, we provide end-to-end DSO approval services, coordinating directly with DSO authorities to manage design submissions, utility connections, inspections, and completion certifications. Our expertise ensures that projects meet all technical and regulatory requirements, enabling smooth execution and timely handover.',
     services: [
@@ -796,7 +796,7 @@ export const AUTHORITIES = [
     id: 'developer-noc',
     name: 'Developer NOCs',
     abbr: 'NOC',
-    icon: '📄',
+    icon: 'developer-noc',
     color: '#5a5a0a',
     overview: 'In Dubai, any construction, renovation, or fit-out within developer-managed communities requires a No Objection Certificate (NOC) from the respective developer. Prominent developers include Nakheel, Emaar, Meraas, DAMAC, Dubai Properties, and others. These NOCs ensure that your project aligns with the community’s architectural guidelines, safety standards, and operational policies.\n\nAt Al Tamdeen Construction, we handle the entire Developer NOC process, coordinating directly with developer authorities to secure approvals efficiently. Our team ensures that your project complies with all developer regulations, permits, and documentation requirements, allowing you to commence work without delays.',
     services: [
@@ -883,6 +883,12 @@ export const PROJECTS = [
   { id: 4, title: 'Business Bay Tower Floors', category: 'Commercial Office', location: 'Business Bay, Dubai', type: 'Office Fit-Out', desc: 'Multi-floor commercial office fit-out for an international professional services firm with full authority coordination.', image: '/images/about.png' },
   { id: 5, title: 'Arabian Ranches Villa', category: 'Residential Villa', location: 'Arabian Ranches, Dubai', type: 'Residential Renovation', desc: 'Complete structural renovation and luxury interior transformation of a 5-bedroom villa with landscaping and pool.', image: '/images/hero.png' },
   { id: 6, title: 'Industrial Warehouse Complex', category: 'Industrial Building', location: 'JAFZA, Dubai', type: 'Industrial Construction', desc: 'Construction of a 12,000 sqm industrial facility with office block, JAFZA approvals, and full MEP infrastructure.', image: '/images/services.png' },
+  { id: 7, title: 'The Meadow Luxury Villa', category: 'Residential Villa', location: 'Emirates Hills, Dubai', type: 'Luxury Residence', desc: 'A bespoke 6-bedroom villa featuring Italian marble, smart home automation, and sustainable energy systems.', image: '/images/villa.png' },
+  { id: 8, title: 'Skyline Tech Hub', category: 'Commercial Office', location: 'Dubai Internet City', type: 'Corporate Office', desc: 'Modern open-plan office design for a global tech giant, optimized for collaboration and productivity.', image: '/images/office.png' },
+  { id: 9, title: 'Golden Sands Retail Hub', category: 'Retail Fit-Out', location: 'Mall of the Emirates', type: 'Luxury Retail', desc: 'Boutique fit-out for high-end jewelry brand with premium security and display lighting systems.', image: '/images/retail.png' },
+  { id: 10, title: 'Logistic Center Alpha', category: 'Industrial Building', location: 'Dubai South', type: 'Warehouse & Logistics', desc: 'State-of-the-art cold storage facility with specialized MEP systems and high-bay racking.', image: '/images/services.png' },
+  { id: 11, title: 'Downtown Executive Suites', category: 'Commercial Office', location: 'Business Bay, Dubai', type: 'Executive Office', desc: 'High-end executive suites with panoramic views, featuring custom walnut joinery and premium finishes.', image: '/images/about.png' },
+  { id: 12, title: 'Coastal Retreat Villa', category: 'Residential Villa', location: 'Jumeirah Island, Dubai', type: 'Beachfront Villa', desc: 'Contemporary minimalist villa design with infinity pool and extensive outdoor entertaining spaces.', image: '/images/villa.png' },
 ];
 
 export const TESTIMONIALS = [

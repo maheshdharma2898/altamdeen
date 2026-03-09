@@ -1,7 +1,35 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import {
+    ArrowRight, Landmark, ShieldCheck, Building2, Anchor, Route,
+    Waypoints, Zap, Factory, Cpu, FileText, Palette, Construction,
+    Ruler, ClipboardList, PenTool
+} from 'lucide-react';
 import { SERVICES } from '@/lib/data';
 import type { Metadata } from 'next';
+
+const iconMap: Record<string, any> = {
+    'architectural': Ruler,
+    'approvals': ClipboardList,
+    'fitout': PenTool,
+    'mep': Zap,
+    'construction': Construction,
+    'dm': Landmark,
+    'dcd': ShieldCheck,
+    'dda': Building2,
+    'trakhees': Anchor,
+    'rta': Route,
+    'rta-row': Waypoints,
+    'dewa': Zap,
+    'jafza': Factory,
+    'dso': Cpu,
+    'developer-noc': FileText,
+    'fitout-approvals': Palette
+};
+
+const renderIcon = (iconKey: string, size = 28) => {
+    const IconComponent = iconMap[iconKey] || Landmark;
+    return <IconComponent size={size} strokeWidth={1.5} />;
+};
 
 export const metadata: Metadata = {
     title: 'Our Services | Al Tamdeen Construction Dubai',
@@ -12,7 +40,7 @@ export default function ServicesPage() {
     return (
         <div className="min-h-screen">
             {/* Hero */}
-            <section className="pt-52 pb-20" style={{ background: '#0a1628' }}>
+            <section className="pt-40 pb-16" style={{ background: '#0a1628' }}>
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #c9a84c 0%, transparent 60%)' }} />
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <div className="section-tag mb-4">What We Offer</div>
@@ -22,7 +50,7 @@ export default function ServicesPage() {
             </section>
 
             {/* Services List */}
-            <section className="py-24 bg-white">
+            <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-6 space-y-8">
                     {SERVICES.map((s, i) => (
                         <div
@@ -32,8 +60,8 @@ export default function ServicesPage() {
                         >
                             <div className="lg:col-span-2">
                                 <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-14 h-14 flex items-center justify-center rounded-sm text-2xl" style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.25)' }}>
-                                        {s.icon}
+                                    <div className="w-14 h-14 flex items-center justify-center rounded-sm text-gold" style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.25)' }}>
+                                        {renderIcon(s.icon)}
                                     </div>
                                     <h2 className="text-2xl font-bold" style={{ fontFamily: 'Playfair Display, serif', color: '#0a1628' }}>{s.title}</h2>
                                 </div>
