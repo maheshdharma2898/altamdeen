@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
+import FloatingContact from '@/components/FloatingContact';
 
 export const metadata: Metadata = {
   title: 'Al Tamdeen Construction | Dubai Authority Approvals & Construction',
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   );

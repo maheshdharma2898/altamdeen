@@ -353,6 +353,78 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── PROJECT GALLERY ── */}
+      <section className="py-24 bg-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="section-tag mb-4">Visual Portfolio</div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif', color: '#0a1628' }}>
+              Project <span className="gold-text">Gallery</span>
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+              Experience the quality of our craftsmanship through these featured snapshots of our architectural and fit-out projects across Dubai.
+            </p>
+            <div className="gold-line w-20 mx-auto mt-4" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px] md:h-[600px]">
+            {/* Main Featured Image */}
+            <div className="md:col-span-7 relative group overflow-hidden rounded-sm hover-lift cursor-pointer shadow-lg">
+              <Image
+                src="/images/gallery-main.png"
+                alt="Luxury Villa Interior"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                <div>
+                  <div className="text-xs font-bold text-yellow-400 uppercase tracking-widest mb-1">Interior Fit-Out</div>
+                  <h4 className="text-white text-xl font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>Palm Jumeirah Villa</h4>
+                </div>
+              </div>
+            </div>
+
+            {/* Vertical Stack */}
+            <div className="md:col-span-5 flex flex-col gap-6">
+              <div className="relative h-1/2 group overflow-hidden rounded-sm hover-lift cursor-pointer shadow-lg">
+                <Image
+                  src="/images/gallery-2.png"
+                  alt="Dubai Skyscraper"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <div className="text-xs font-bold text-yellow-400 uppercase tracking-widest mb-1">Architecture</div>
+                    <h4 className="text-white text-lg font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>Business Bay Tower</h4>
+                  </div>
+                </div>
+              </div>
+              <div className="relative h-1/2 group overflow-hidden rounded-sm hover-lift cursor-pointer shadow-lg">
+                <Image
+                  src="/images/gallery-3.png"
+                  alt="Modern Office"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <div className="text-xs font-bold text-yellow-400 uppercase tracking-widest mb-1">Commercial</div>
+                    <h4 className="text-white text-lg font-bold" style={{ fontFamily: 'Playfair Display, serif' }}>DIFC Corporate Office</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Link href="/projects" className="btn-outline">
+              Explore All Projects
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── CONTACT CTA ── */}
       <section className="py-16 relative overflow-hidden" style={{ background: '#0d1f3c' }}>
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 60% 50%, #c9a84c 0%, transparent 60%)' }} />

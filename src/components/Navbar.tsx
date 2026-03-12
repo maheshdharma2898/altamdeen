@@ -19,6 +19,7 @@ const navLinks = [
     { label: 'Services', href: '/services', hasMega: true },
     { label: 'Authorities', href: '/authorities' },
     { label: 'Projects', href: '/projects' },
+    { label: 'Gallery', href: '/gallery' },
     { label: 'Insights', href: '/blog' },
     { label: 'Contact', href: '/contact' },
 ];

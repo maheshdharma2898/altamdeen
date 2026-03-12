@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, ArrowRight, Building2, ClipboardCheck, Hammer, Zap, HardHat, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Building2, ClipboardCheck, Hammer, Zap, HardHat, Globe, Instagram, Linkedin, Facebook } from 'lucide-react';
 
 const footerServices = [
     { label: 'Architectural Design', href: '/services/architectural-design' },
@@ -84,6 +84,19 @@ export default function Footer() {
                                 www.altamdeenco.com
                             </div>
                         </div>
+
+                        {/* Social Media */}
+                        <div className="mt-8 flex gap-4">
+                            <a href="https://instagram.com/altamdeen" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-sm transition-all hover:scale-110" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(201,168,76,0.2)', color: '#c9a84c' }}>
+                                <Instagram size={18} />
+                            </a>
+                            <a href="https://linkedin.com/company/altamdeen" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-sm transition-all hover:scale-110" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(201,168,76,0.2)', color: '#c9a84c' }}>
+                                <Linkedin size={18} />
+                            </a>
+                            <a href="https://facebook.com/altamdeen" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-sm transition-all hover:scale-110" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(201,168,76,0.2)', color: '#c9a84c' }}>
+                                <Facebook size={18} />
+                            </a>
+                        </div>
                     </div>
 
                     {/* Services */}
@@ -123,6 +136,7 @@ export default function Footer() {
                             {[
                                 { label: 'About Us', href: '/about' },
                                 { label: 'Projects', href: '/projects' },
+                                { label: 'Gallery', href: '/gallery' },
                                 { label: 'Insights', href: '/blog' },
                                 { label: 'Contact', href: '/contact' },
                             ].map(l => (
