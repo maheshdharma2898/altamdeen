@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Instagram, Linkedin, Share2, X } from 'lucide-react';
+import { MessageCircle, Instagram, Share2, X, Twitter } from 'lucide-react';
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,21 +16,21 @@ const FloatingContact = () => {
         </svg>
       ),
       color: '#25D366',
-      href: 'https://wa.me/9788898983?text=HI%20I%20need%20to%20enquire%20about%20altamdeen',
+      href: 'https://wa.me/971542461505?text=HI%20I%20need%20to%20enquire%20about%20altamdeen',
       delay: 0.05,
     },
     {
       name: 'Instagram',
       icon: <Instagram size={20} />,
       color: '#E4405F',
-      href: 'https://instagram.com/altamdeen',
+      href: 'https://www.instagram.com/altamdeen_construction/?hl=en',
       delay: 0.1,
     },
     {
-      name: 'LinkedIn',
-      icon: <Linkedin size={20} />,
-      color: '#0077B5',
-      href: 'https://linkedin.com/company/altamdeen',
+      name: 'X (Twitter)',
+      icon: <Twitter size={20} />,
+      color: '#000000',
+      href: 'https://x.com/AltamdeenCo',
       delay: 0.15,
     },
   ];
